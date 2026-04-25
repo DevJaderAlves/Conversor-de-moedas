@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Bem-vindo ao Conversor de Moedas</h1>
+        <img class="gif" src="./assets/anin.gif" alt="Conversor de Moedas">
+    </header>
+    <main class="container-main">
+        <div class="campo">
+            <label for="moeda-origem">Converter de</label>
+            <select id="moeda-origem" required>
+                <option value="BRL" selected>Real Brasileiro (R$)</option>
+                <option value="USD">Dólar Americano (US$)</option>
+                <option value="EUR">Euro (€)</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label for="moeda-destino">Converter para</label>
+            <select id="moeda-destino" required>
+                <option value="USD" selected>Dólar Americano (US$)</option>
+                <option value="BRL">Real Brasileiro (R$)</option>
+                <option value="EUR">Euro (€)</option>
+            </select>
+        </div>
+        <div class="campo">
+            <label for="valor">Valor</label>
+            <input class="main-valor" id="valor" type="number" step="0.01" placeholder="0,00" required>
+        </div>
+        <button class="main-button">Converter</button>
+
+        <section class="container-band" id="container-resultado">
+            <p class="resultado-vazio">Preencha os campos e clique em converter.</p>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
